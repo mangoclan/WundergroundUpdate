@@ -1,0 +1,37 @@
+WundergroundUpdate updates the Weather Underground site (wunderground.com)
+with data from the Oregon Scientific WMR200A personal weather station.
+
+It will probably work with other Oregon Scientific weather stations, and
+perhaps with slight modification for any weather station supported by
+Weather Display.
+ 
+This code was developed for Weather Display version 10.37j build 01. When
+executed, this program reads the last line of Weather Display's log file,
+parses the values into a hashmap using wunderground.com's URL parameters as
+keys. It then updates the data to wunderground.com via an HTTP request.
+ 
+In order to use this program you must first create an account and a station
+ID and password at wunderground.com. The station ID and password must then
+be configured in WundergruondUpdate.properties, along with the Weather Display
+log location if you did not install Weather Display in the default location
+(c:/wdisplay).
+ 
+The properties file is distributed as WundergroundUpdate.properties.txt.
+Copy this file to WundergroundUpdate.properties and edit the new file to
+add your wunderground.com credentials and Weather Update log path.
+
+Compile the application into a jar file. The WundergroundUpdate.jardesc
+file can be used if you are using Eclipse. Otherwise just make sure the
+jar file contains:
+- com/mangoclan/WundergroundUpdate.class
+- com/mangoclan/WundergroundUpdate.properties
+- a manifest that specifies the Main-Class
+
+The application must be run on a schedule as it only performs a single update
+each time it is executed.  On Windows, use XXX and schedule execution of the
+application at a frequency of your choice (suggestion: 5 minutes).
+
+The command to execute the application is:
+
+javaw -jar WundergroundUpdate.jar
+
