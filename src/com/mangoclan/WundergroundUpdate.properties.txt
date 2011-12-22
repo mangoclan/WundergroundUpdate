@@ -1,0 +1,9 @@
+urlNormalUpload = http://weatherstation.wunderground.com/weatherstation/updateweatherstation.php
+urlRapidFire = http://rtupdate.wunderground.com/weatherstation/updateweatherstation.php
+
+uploadIntervalSecs = 60
+
+stationID = <your wunderground.com station ID>
+password = <your wunderground.com station upload password>
+
+dataFilePath = c:\\wdisplay\\logfiles\\dailylog.txt
