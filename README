@@ -28,8 +28,9 @@ jar file contains:
 - a manifest that specifies the Main-Class
 
 The application must be run on a schedule as it only performs a single update
-each time it is executed.  On Windows, use XXX and schedule execution of the
-application at a frequency of your choice (suggestion: 5 minutes).
+each time it is executed.  On Windows, use Task Scheduler and schedule
+the application to trigger at system startup and repeat at a frequency of
+your choice (suggestion: 5 minutes).
 
 The command to execute the application is:
 
